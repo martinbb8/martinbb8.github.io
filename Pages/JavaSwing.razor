@@ -1,0 +1,60 @@
+﻿@page "/java-swing"
+<Lightbox @ref="myLightbox" />
+
+<PageTitle>Proyecto Java/Swing - Sopa de Letras</PageTitle>
+
+@* 1. AÑADIMOS EL COMPONENTE LIGHTBOX AQUÍ Y LE ASIGNAMOS LA REFERENCIA *@
+<Lightbox @ref="myLightbox" />
+
+<div class="container py-4">
+    <h4 class="mb-4 project-title">Sopa de Letras </h4>
+
+    <!-- 2. DESCRIPCIÓN Y PUNTOS CLAVE (UL) -->
+    <p class="project-description">
+        Este fue un proyecto fundamental en 1º de DAM, diseñado para afianzar los conceptos básicos de la Programación Orientada a Objetos (POO) y el desarrollo de interfaces de escritorio simples usando la biblioteca nativa de Java, Swing.
+    </p>
+
+    <h2 class="h5 mt-4 mb-3">Tecnologías y Conceptos Clave Demostrados:</h2>
+    <ul class="key-points-list">
+        <li>
+            <span class="bi bi-file-earmark-code-fill me-2 text-info"></span>
+            **Estructura de Código Profesional:** Uso de clases, paquetes y módulos en el IDE de Eclipse, reflejando una organización de código limpio y escalable.
+        </li>
+        <li>
+            <span class="bi bi-diagram-3-fill me-2 text-success"></span>
+            **Programación Orientada a Objetos (POO):** Modelado de la lógica del juego (tablero, palabras, celdas) mediante clases y objetos, demostrando encapsulamiento y cohesión.
+        </li>
+        <li>
+            <span class="bi bi-grid-fill me-2 text-primary"></span>
+            **GUI con Swing:** Implementación de la Interfaz Gráfica de Usuario (GUI) mediante un array bidimensional de botones (`JButton[10][10]`) para construir dinámicamente el tablero de la sopa de letras.
+        </li>
+        <li>
+            <span class="bi bi-puzzle-fill me-2 text-warning"></span>
+            **Lógica de Colocación y Solapamiento:** Desarrollo de algoritmos para insertar palabras de manera horizontal, vertical y diagonal, incluyendo la lógica crucial para permitir que varias palabras compartan las mismas letras en el tablero.
+        </li>
+    </ul>
+
+    <!-- 3. GALERÍA DE IMÁGENES -->
+    <h2 class="h5 mt-5 mb-3">Capturas de la Interfaz:</h2>
+    <div class="row g-2">
+        @for (int i = 1; i <= 4; i++)
+        {
+            var imageUrl = $"/images/sopa_{i}.png";
+            var description = $"Captura de pantalla {i} de la Sopa de Letras con Java Swing";
+
+            <div class="col-6 col-md-3">
+                <img src="@imageUrl"
+                     alt="@description"
+                     class="img-fluid project-thumb"
+                     @onclick="() => myLightbox.Show(imageUrl, description)"
+                     style="width: 100%; height: auto; max-height: 200px; object-fit: cover; cursor: pointer;"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x112/343a40/white?text=Sopa+@i+PNG'" />
+            </div>
+        }
+    </div>
+
+</div>
+
+@code {
+    private Lightbox myLightbox = default!;
+}

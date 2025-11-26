@@ -1,0 +1,73 @@
+﻿@page "/AccesoDatos"
+<Lightbox @ref="myLightbox" />
+
+<PageTitle>Acceso a Datos - Persistencia y BD</PageTitle>
+
+@* Configuración del Lightbox usando referencia para las capturas *@
+<Lightbox @ref="myLightbox" />
+
+<div class="container py-4">
+    <h1 class="mb-4 project-title">Acceso a Datos (Back-end y Front-end)</h1>
+
+    <!-- 2. DESCRIPCIÓN Y PUNTOS CLAVE (OL) -->
+    <p class="project-description">
+        Esta sección agrupa varios ejercicios fundamentales de la asignatura de **Acceso a Datos (2º DAM)**, demostrando el manejo de múltiples paradigmas de persistencia: Bases de Datos Relacionales (MySQL), NoSQL (IndexedDB, XQuery) y Orientadas a Objetos (db4o).
+    </p>
+
+    <h2 class="h5 mt-4 mb-3">Ejercicios y Tecnologías Clave:</h2>
+    <ol class="key-points-list">
+        <li>
+            **ORM Laravel / Eloquent:**
+            <p>Implementación de un sistema CRUD simple en el framework Laravel, utilizando el ORM Eloquent para mapear la base de datos MySQL a modelos de PHP. Se demuestra el manejo de migraciones, modelos y controladores para una gestión eficiente de datos sin escribir SQL puro.</p>
+        </li>
+        <li>
+            **UrbanBikes:**
+            <p>Ejercicio básico construida con **Apache, MySQL y PHP**. Se centró en la creación de pedidos y transacciones seguras. Se destaca la implementación de **transacciones SQL** para garantizar la integridad de los datos (ACID) y la generación de informes básicos.</p>
+        </li>
+        <li>
+            **IndexedDB :**
+            <p>Uso de la API de **IndexedDB** para el almacenamiento estructurado de grandes volúmenes de datos del lado del cliente (NoSQL). Este proyecto demuestra la capacidad de trabajar con bases de datos persistentes directamente en el navegador, ideal para aplicaciones *offline* o de alto rendimiento.</p>
+        </li>
+        <li>
+            **db4o (Database for Objects) :**
+            <p>Manejo de una Base de Datos Orientada a Objetos (OODBMS) **db4o** desde Java. Este ejercicio elimina la necesidad de ORM, almacenando y recuperando objetos de Java directamente. Se resalta la simplicidad en la persistencia al trabajar con la API nativa de db4o.</p>
+        </li>
+        <li>
+            **Complementario (BaseX/XQuery):**
+            <p>Manejo de bases de datos XML a través del motor **BaseX** y lenguaje **XQuery**, demostrando el dominio de estructuras semi-estructuradas para la recuperación y manipulación de información.</p>
+        </li>
+    </ol>
+
+    <!-- 3. GALERÍA DE IMÁGENES -->
+    <h2 class="h5 mt-5 mb-3">Capturas de los Ejercicios:</h2>
+    <div class="row g-2">
+        @for (int i = 1; i <= 4; i++)
+        {
+            var imageUrl = $"/images/AccesoDatos_{i}.png";
+            string title;
+            switch (i)
+            {
+                case 1: title = "1. Laravel/Eloquent (ORM)"; break;
+                case 2: title = "2. UrbanBikes (MySQL/PHP)"; break;
+                case 3: title = "3. IndexedDB (NoSQL)"; break;
+                case 4: title = "4. db4o (OODBMS)"; break;
+                default: title = $"Ejercicio {i}"; break;
+            }
+            var description = $"Captura del ejercicio: {title}";
+
+            <div class="col-6 col-md-3 text-center">
+                <p class="text-muted mb-1 badge-custom">@title</p>
+                <img src="@imageUrl"
+                     alt="@description"
+                     class="img-fluid project-thumb-acceso"
+                     @onclick="() => myLightbox.Show(imageUrl, description)"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x112/00695c/white?text=AD+@i+PNG'" />
+            </div>
+        }
+    </div>
+
+</div>
+
+@code {
+    private Lightbox myLightbox = default!;
+}

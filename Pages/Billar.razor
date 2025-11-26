@@ -1,0 +1,72 @@
+﻿@page "/Billar"
+<Lightbox @ref="myLightbox" />
+
+<PageTitle>Proyecto Billar 3D - Unity & C#</PageTitle>
+
+
+
+<div class="container py-4">
+    <h4 class="mb-4 project-title">Simulador de Billar 3D (Unity)</h4>
+
+    <!-- 1. ENLACE DESTACADO (Descarga del juego) -->
+    <div class="mb-4 p-3 d-flex justify-content-center align-items-center link-card billar-link-card">
+        <span class="bi bi-download me-2"></span>
+        <a href="https://github.com/martinbb8/billar/releases" target="_blank" class="live-link download-link">
+            Descargar versión .EXE para Windows (GitHub Releases)
+        </a>
+    </div>
+
+    <!-- 2. DESCRIPCIÓN Y PUNTOS CLAVE (UL) -->
+    <p class="project-description">
+        Desarrollo de un juego de billar completo en 3D utilizando el motor Unity, enfocándose en la implementación de físicas realistas y la lógica de juego mediante scripts de C#. Este proyecto destaca la capacidad de trabajar en entornos de desarrollo de videojuegos.
+    </p>
+
+    <h2 class="h5 mt-4 mb-3">Tecnologías y Desafíos Clave:</h2>
+    <ul class="key-points-list">
+        <li>
+            <span class="bi bi-unity me-2 text-dark"></span>
+            **Motor de Juego Unity:** Utilizado como plataforma robusta para crear la experiencia interactiva en 3D, incluyendo configuración de escenarios, cámaras y luces.
+        </li>
+        <li>
+            <span class="bi bi-c-sharp me-2 text-purple"></span>
+            **Lógica de Juego (C# en VS 2022):** Programación de la jugabilidad (fuerza de tiro, detección de colisiones, gestión de puntuaciones) mediante scripts en C#, demostrando habilidades en lógica compleja y manejo de eventos.
+        </li>
+        <li>
+            <span class="bi bi-speedometer2 me-2 text-warning"></span>
+            **Motor de Físicas (Physics Engine):** Dominio de `Rigidbodies`, `Colliders`, materiales y la configuración de la gravedad para simular con precisión el movimiento, el impacto y la fricción de las bolas de billar.
+        </li>
+        <li>
+            <span class="bi bi-box me-2 text-info"></span>
+            **Gestión de Assets y Escenas:** Importación y tratamiento de elementos 3D, texturizado, y configuración del `Canvas` para la interfaz de usuario dentro del entorno de Unity.
+        </li>
+        <li>
+            <span class="bi bi-file-zip-fill me-2 text-danger"></span>
+            **Distribución y Packaging:** Compresión del proyecto final en un paquete `.zip` para Windows (.exe) y su distribución a través de GitHub Releases, demostrando el ciclo completo de desarrollo y entrega de software.
+        </li>
+    </ul>
+
+    <!-- 3. GALERÍA DE IMÁGENES -->
+    <h2 class="h5 mt-5 mb-3">Capturas del Entorno de Juego:</h2>
+    <div class="row g-2">
+        @for (int i = 1; i <= 4; i++)
+        {
+            // Nota: Se asume que las imágenes se llaman billar_1.png, billar_2.png, etc.
+            var imageUrl = $"/images/billar_{i}.png";
+            var description = $"Captura {i} del simulador de Billar 3D";
+
+            <div class="col-6 col-md-3">
+                <img src="@imageUrl"
+                     alt="@description"
+                     class="img-fluid project-thumb"
+                     @onclick="() => myLightbox.Show(imageUrl, description)"
+                     style="width: 100%; height: auto; max-height: 200px; object-fit: cover; cursor: pointer;"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x112/000/white?text=Unity+@i+PNG'" />
+            </div>
+        }
+    </div>
+
+</div>
+
+@code {
+    private Lightbox myLightbox = default!;
+}

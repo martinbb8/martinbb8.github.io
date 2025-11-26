@@ -1,0 +1,54 @@
+﻿/* Estilos generales */
+.project-title {
+    color: #DC3545; /* Un rojo vibrante, similar al de Angular, para el título */
+    font-weight: 150;
+}
+
+/* Estilo para el enlace destacado */
+.link-card {
+    background-color: #f8f9fa; /* Fondo muy claro para la caja */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.live-link {
+    font-weight: 600;
+    color: #17a2b8 !important; /* Color azul cian para destacar sin ser estridente */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .live-link:hover {
+        color: #0b8093 !important;
+    }
+
+/* Estilos para la lista de puntos clave */
+.key-points-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .key-points-list li {
+        margin-bottom: 15px;
+        font-size: 0.95rem; /* Pequeño pero legible para móvil */
+        line-height: 1.5;
+    }
+
+/* Estilos para las miniaturas de imagen */
+.project-thumb {
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .project-thumb:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+/* Asegura el tamaño para móviles (la grilla de Bootstrap ya ayuda) */
+@media (max-width: 576px) {
+    .project-title {
+        font-size: 1.5rem;
+    }
+}

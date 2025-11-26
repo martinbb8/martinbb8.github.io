@@ -1,0 +1,70 @@
+﻿@* @file NavMenu.razor
+   Menú de navegación principal para el CV/Portafolio. *@
+<div class="top-row  navbar navbar-dark">
+    <div class="container-fluid">
+        <!-- TÍTULO PRINCIPAL DEL MENÚ DE NAVEGACIÓN -->
+        <a class="navbar-brand" href="#">INICIO</a>
+       
+    </div>
+</div>
+
+<div class="nav-scrollable" >
+
+
+    <nav class="flex-column">
+
+        <!-- ------------------------------------ -->
+        <!-- SECCIÓN DE PROYECTOS -->
+        <!-- ------------------------------------ -->
+        <div class="proyectos pt-3">PROYECTOS</div>
+        <!-- WebApp Angular -->
+        <div class="nav-item">
+            @* Eliminado px-3 *@
+            <NavLink class="nav-link" href="webapp-angular" style="color: white !important;">
+                <span aria-hidden="true"></span> <small>WebAngular</small>
+            </NavLink>
+        </div>
+
+        <!-- S_Letras Java/Swing -->
+        <div class="nav-item">
+            @* Eliminado px-3 *@
+            <NavLink class="nav-link" href="java-swing" style="color: white !important;">
+                <span aria-hidden="true"></span> JavaSwing
+            </NavLink>
+        </div>
+
+        <!-- Billar Unity -->
+        <div class="nav-item">
+            @* Eliminado px-3 *@
+            <NavLink class="nav-link" href="Billar" style="color: white !important;">
+                <span aria-hidden="true"></span><small>Billar 3D</small>
+            </NavLink>
+        </div>
+
+        <!-- API Laravel -->
+        <div class="nav-item">
+            @* Eliminado px-3 *@
+            <NavLink class="nav-link" href="AccesoDatos" style="color: white !important;">
+                <span aria-hidden="true"></span> <small>AccesoDatos</small>
+            </NavLink>
+        </div>
+        <div class="nav-item">
+            @* Eliminado px-3 *@
+            <NavLink class="nav-link" href="Blazor" style="color: white !important;">
+                <span aria-hidden="true"></span> Blazor
+            </NavLink>
+        </div>
+
+    </nav>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

@@ -1,0 +1,47 @@
+﻿@page "/Blazor"
+
+<PageTitle>Metodología y Tecnología del Portfolio</PageTitle>
+
+
+<div class="container py-4">
+    <h1 class="mb-4 project-title">Este Portfolio: Desarrollado con Blazor WebAssembly</h1>
+
+    <!-- 2. DESCRIPCIÓN -->
+    <p class="project-description">
+        El portfolio que estás visualizando es un proyecto de desarrollo web *front-end* avanzado, construido utilizando **Blazor WebAssembly (WASM)**. La elección de esta tecnología no fue casual, sino estratégica, buscando demostrar la capacidad de crear aplicaciones web modernas, ligeras y con un rendimiento cercano al código nativo.
+    </p>
+    <p class="project-description">
+        Este ejercicio sirve como la prueba final de concepto: utilizar el propio proyecto para destacar las ventajas de la tecnología empleada.
+    </p>
+
+    <h2 class="h5 mt-4 mb-3">Puntos Clave y Ventajas de Blazor WASM:</h2>
+    <ul class="key-points-list">
+        <li>
+            <span class="bi bi-c-sharp me-2 text-primary"></span>
+            **Desarrollo Unificado (C# End-to-End):** Todo el código, tanto la lógica de la interfaz de usuario como la manipulación de datos, está escrito íntegramente en C#. Esto elimina la necesidad de alternar entre C# (back-end) y JavaScript/TypeScript (front-end), simplificando drásticamente el mantenimiento y reduciendo la complejidad del proyecto.
+        </li>
+        <li>
+            <span class="bi bi-rocket-takeoff-fill me-2 text-success"></span>
+            **Rendimiento y WebAssembly:** La aplicación se compila a **WebAssembly (WASM)**, un formato de código binario que se ejecuta directamente en el navegador. Esto proporciona un rendimiento superior y una ejecución casi a velocidad nativa, lo que es ideal para aplicaciones con lógica compleja.
+        </li>
+        <li>
+            <span class="bi bi-file-earmark-code me-2 text-info"></span>
+            **Hosting Estático y Eficiencia de Costes:** Al ser un proyecto Blazor WebAssembly, el código se descarga completamente al cliente. Esto permite alojar la aplicación como un conjunto de **archivos estáticos** (HTML, CSS, DLLs de C#) en servicios gratuitos como **GitHub Pages** (o Azure Storage), eliminando la necesidad de un servidor de aplicación dedicado y minimizando los costes de infraestructura.
+        </li>
+        <li>
+            <span class="bi bi-ui-checks-grid me-2 text-warning"></span>
+            **Componentización con Razor:** El uso de componentes Razor (`.razor`) fomenta un diseño de interfaz modular y reutilizable, una práctica esencial para el desarrollo de aplicaciones escalables.
+        </li>
+    </ul>
+
+    <h2 class="h5 mt-5 mb-3">Conclusión Técnica:</h2>
+    <p class="project-description text-muted">
+        La elección de Blazor WebAssembly demuestra la adopción de tecnologías de vanguardia para entregar una Single Page Application (SPA) robusta, eficiente y lista para ser alojada de la manera más económica y rápida posible, maximizando la visibilidad del portfolio.
+    </p>
+
+</div>
+
+@code {
+    // No necesita lógica específica ya que es una página de presentación.
+}
+

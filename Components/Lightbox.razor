@@ -1,0 +1,109 @@
+﻿@* Lightbox.razor - Componente modal reutilizable para ampliar imágenes *@
+
+
+
+@if (IsVisible)
+
+{
+
+    @* Fondo oscuro que sirve como botón de cierre *@
+
+    <div class="modal-backdrop" @onclick="CloseModal"></div>
+
+
+
+    @* Contenedor de la imagen *@
+
+    <div class="modal-content-custom" role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+
+
+
+        <div class="d-flex justify-content-end">
+
+            <button class="btn-close btn-close-white" @onclick="CloseModal" title="Cerrar (Esc)"></button>
+
+        </div>
+
+
+
+        <img src="@FullImageUrl" alt="@ImageAlt" class="img-fluid" />
+
+
+
+        <div class="caption mt-2 p-2 text-white">
+
+            @Description
+
+        </div>
+
+    </div>
+
+}
+
+
+
+@code {
+
+
+
+
+
+    [Parameter]
+
+    public bool IsVisible { get; set; } = false;
+
+
+
+    [Parameter]
+
+    public string FullImageUrl { get; set; } = "images/placeholder.jpg";
+
+
+
+    [Parameter]
+
+    public string ImageAlt { get; set; } = "Imagen de proyecto ampliada";
+
+
+
+    [Parameter]
+
+    public string Description { get; set; } = "";
+
+
+
+    // Evento de devolución de llamada para notificar al padre que cierre el modal
+
+    [Parameter]
+
+    public EventCallback OnClose { get; set; }
+
+    public void Show(string url, string description)
+
+    {
+
+        FullImageUrl = url;
+
+        Description = description;
+
+        ImageAlt = description; // Usamos la descripción como texto alternativo por defecto
+
+        IsVisible = true;
+
+        StateHasChanged(); // Forzar el repintado para mostrar el modal inmediatamente
+
+    }
+
+
+
+    private async Task CloseModal()
+
+    {
+
+        IsVisible = false;
+
+        await OnClose.InvokeAsync();
+
+    }
+
+}

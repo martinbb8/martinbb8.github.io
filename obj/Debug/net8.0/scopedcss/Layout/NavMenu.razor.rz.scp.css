@@ -1,0 +1,56 @@
+.navbar-toggler[b-vbw4x802x2] {
+    /* Mantenemos el bot�n de men� visible */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-scrollable[b-vbw4x802x2] {
+    /* El contenedor del men� debe ser alto */
+    overflow-y: auto;
+}
+
+
+/* * Ajustamos los enlaces de navegaci�n (NavLink) 
+ * Eliminamos el padding interno y forzamos la alineaci�n a la izquierda.
+ */
+.nav-link[b-vbw4x802x2] {
+    color: white !important;
+    padding: 0rem 1rem 0.5rem 0.5rem; /* Ajustado: 0.5rem a la izquierda, 1rem a la derecha */
+    margin-left: 0; /* Aseguramos que no haya margen izquierdo */
+    text-align: left;
+    white-space: nowrap; /* Mantenemos el texto en una sola l�nea (ya lo hab�as hecho) */
+}
+
+    /* Estilo para el enlace activo (p�gina seleccionada) */
+    .nav-link.active[b-vbw4x802x2] {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-left: 4px solid #f90; /* Destacamos el elemento activo */
+    }
+
+/* Estilos para el texto principal 'PROYECTOS' */
+.navbar-brand[b-vbw4x802x2] {
+    font-size: 1.1rem;
+    color: white !important;
+    text-align: left;
+    margin-left: 0.5rem; /* Peque�o margen para separarlo del borde */
+}
+
+.top-row[b-vbw4x802x2] {
+    height: 7rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Correcci�n para asegurar que los items est�n pegados al borde */
+.nav-item[b-vbw4x802x2] {
+    padding: 0; /* Eliminamos el padding lateral para que se pegue al borde */
+    color: white;
+}
+/* Estilo para el t�tulo de la secci�n de proyectos */
+.proyectos[b-vbw4x802x2] {
+    color: #aaaaaa; /* Un gris claro para contraste sutil */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 0.5rem; /* Alineado con los enlaces */
+    margin-bottom: 5px;
+}

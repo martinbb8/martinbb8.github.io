@@ -1,0 +1,32 @@
+﻿/* Estilos para el título */
+h4 {
+    font-weight: bold;
+    color: #4a4a4a; /* Gris oscuro para el encabezado */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd; /* Separador sutil */
+    margin-bottom: 5px;
+}
+
+/* Estilos para la lista (ul) */
+.education-section ul {
+    list-style: none; /* Quitar las viñetas por defecto */
+    padding-left: 0;
+}
+
+/* Estilos para cada elemento de la lista (li) */
+.education-section li {
+    margin-bottom: 2px;
+    line-height: 1.4;
+}
+
+/* Estilos para el texto del título (DAM, ESAD, COU) */
+.degree {
+    font-weight: 600; /* Un poco más grueso */
+    color: #007bff; /* Color primario de Bootstrap */
+}
+
+/* Estilos para los detalles (fechas y ubicación) */
+.details {
+    color: #6c757d; /* Gris sutil */
+    font-size: 0.95em;
+}

@@ -1,0 +1,528 @@
+/* /Components/Educacion.razor.rz.scp.css */
+/* Estilos para el título */
+h4[b-qnuyrztpud] {
+    font-weight: bold;
+    color: #4a4a4a; /* Gris oscuro para el encabezado */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd; /* Separador sutil */
+    margin-bottom: 5px;
+}
+
+/* Estilos para la lista (ul) */
+.education-section ul[b-qnuyrztpud] {
+    list-style: none; /* Quitar las viñetas por defecto */
+    padding-left: 0;
+}
+
+/* Estilos para cada elemento de la lista (li) */
+.education-section li[b-qnuyrztpud] {
+    margin-bottom: 2px;
+    line-height: 1.4;
+}
+
+/* Estilos para el texto del título (DAM, ESAD, COU) */
+.degree[b-qnuyrztpud] {
+    font-weight: 600; /* Un poco más grueso */
+    color: #007bff; /* Color primario de Bootstrap */
+}
+
+/* Estilos para los detalles (fechas y ubicación) */
+.details[b-qnuyrztpud] {
+    color: #6c757d; /* Gris sutil */
+    font-size: 0.95em;
+}
+/* /Components/Experiencia.razor.rz.scp.css */
+/* Estilos para el título */
+h4[b-li9e4n590y] {
+    font-weight: bold;
+    color: #4a4a4a; /* Gris oscuro para el encabezado */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd; /* Separador sutil */
+    margin-bottom: 5px;
+}
+
+/* Estilos para la lista (ul) */
+.education-section ul[b-li9e4n590y] {
+    list-style: none; /* Quitar las viñetas por defecto */
+    padding-left: 0;
+}
+
+/* Estilos para cada elemento de la lista (li) */
+.education-section li[b-li9e4n590y] {
+    margin-bottom: 2px;
+    line-height: 1.4;
+}
+
+/* Estilos para el texto del título (DAM, ESAD, COU) */
+.degree[b-li9e4n590y] {
+    font-weight: 600; /* Un poco más grueso */
+    color: #007bff; /* Color primario de Bootstrap */
+}
+
+/* Estilos para los detalles (fechas y ubicación) */
+.details[b-li9e4n590y] {
+    color: #6c757d; /* Gris sutil */
+    font-size: 0.95em;
+}
+/* /Components/Habilidades.razor.rz.scp.css */
+/* Estilos para el título */
+h4[b-wao13owa13] {
+    font-weight: bold;
+    color: #4a4a4a; /* Gris oscuro para el encabezado */
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ddd; /* Separador sutil */
+    margin-bottom: 5px;
+}
+
+/* Estilos para la lista (ul) */
+.education-section ul[b-wao13owa13] {
+    list-style: none; /* Quitar las viñetas por defecto */
+    padding-left: 0;
+}
+
+/* Estilos para cada elemento de la lista (li) */
+.education-section li[b-wao13owa13] {
+    margin-bottom: 2px;
+    line-height: 1.4;
+}
+
+/* Estilos para el texto del título (DAM, ESAD, COU) */
+.degree[b-wao13owa13] {
+    font-size: 0.95em;
+    color: #6c757d; /* Color primario de Bootstrap */
+}
+
+/* Estilos para los detalles (fechas y ubicación) */
+.details[b-wao13owa13] {
+    color: #6c757d; /* Gris sutil */
+    font-size: 0.95em;
+}
+/* /Components/Lightbox.razor.rz.scp.css */
+/* 1. Fondo que cubre toda la pantalla (modal-backdrop) */
+.modal-backdrop[b-v4h88n17r3] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    /* === AJUSTE CRUCIAL PARA EL ZOOM TÁCTIL === */
+    /* Permite que los gestos táctiles (pinch-to-zoom) sean procesados por el navegador */
+    touch-action: pan-y;
+}
+
+
+
+    /* 3. Ajuste de la imagen */
+    .modal-content-custom img[b-v4h88n17r3] {
+        display: block;
+        max-width: 100%;
+        max-height: 90vh;
+        height: auto;
+        border-radius: 8px;
+        cursor: zoom-in; /* Indicador visual en escritorio */
+    }
+
+/* 4. Título/Descripción */
+.caption[b-v4h88n17r3] {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+}
+
+/* 5. Botón de cerrar */
+.btn-close[b-v4h88n17r3] {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1060;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+    .btn-close:hover[b-v4h88n17r3] {
+        opacity: 1;
+    }
+/* /Layout/MainLayout.razor.rz.scp.css */
+.page[b-5tyquympg9] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-5tyquympg9] {
+    flex: 1;
+}
+
+.sidebar[b-5tyquympg9] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-5tyquympg9] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-5tyquympg9]  a, .top-row[b-5tyquympg9]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+    }
+
+    .top-row[b-5tyquympg9]  a:hover, .top-row[b-5tyquympg9]  .btn-link:hover {
+        text-decoration: underline;
+    }
+
+    .top-row[b-5tyquympg9]  a:first-child {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-5tyquympg9] {
+        justify-content: space-between;
+    }
+
+    .top-row[b-5tyquympg9]  a, .top-row[b-5tyquympg9]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-5tyquympg9] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-5tyquympg9] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-5tyquympg9] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row.auth[b-5tyquympg9]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+
+    .top-row[b-5tyquympg9], article[b-5tyquympg9] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Layout/NavMenu.razor.rz.scp.css */
+.navbar-toggler[b-vbw4x802x2] {
+    /* Mantenemos el bot�n de men� visible */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-scrollable[b-vbw4x802x2] {
+    /* El contenedor del men� debe ser alto */
+    overflow-y: auto;
+}
+
+
+/* * Ajustamos los enlaces de navegaci�n (NavLink) 
+ * Eliminamos el padding interno y forzamos la alineaci�n a la izquierda.
+ */
+.nav-link[b-vbw4x802x2] {
+    color: white !important;
+    padding: 0rem 1rem 0.5rem 0.5rem; /* Ajustado: 0.5rem a la izquierda, 1rem a la derecha */
+    margin-left: 0; /* Aseguramos que no haya margen izquierdo */
+    text-align: left;
+    white-space: nowrap; /* Mantenemos el texto en una sola l�nea (ya lo hab�as hecho) */
+}
+
+    /* Estilo para el enlace activo (p�gina seleccionada) */
+    .nav-link.active[b-vbw4x802x2] {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-left: 4px solid #f90; /* Destacamos el elemento activo */
+    }
+
+/* Estilos para el texto principal 'PROYECTOS' */
+.navbar-brand[b-vbw4x802x2] {
+    font-size: 1.1rem;
+    color: white !important;
+    text-align: left;
+    margin-left: 0.5rem; /* Peque�o margen para separarlo del borde */
+}
+
+.top-row[b-vbw4x802x2] {
+    height: 7rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Correcci�n para asegurar que los items est�n pegados al borde */
+.nav-item[b-vbw4x802x2] {
+    padding: 0; /* Eliminamos el padding lateral para que se pegue al borde */
+    color: white;
+}
+/* Estilo para el t�tulo de la secci�n de proyectos */
+.proyectos[b-vbw4x802x2] {
+    color: #aaaaaa; /* Un gris claro para contraste sutil */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 0.5rem; /* Alineado con los enlaces */
+    margin-bottom: 5px;
+}
+/* /Pages/AccesoDatos.razor.rz.scp.css */
+/* Estilos generales */
+.project-title[b-xdmzba3re0] {
+    color: #00695c; /* Tono verde oscuro, asociado a bases de datos o back-end */
+    font-weight: 700;
+}
+
+/* Estilo para la lista ordenada de ejercicios */
+.key-points-list[b-xdmzba3re0] {
+    padding-left: 20px;
+}
+
+    .key-points-list li[b-xdmzba3re0] {
+        margin-bottom: 25px;
+        font-size: 1rem;
+        line-height: 1.6;
+        font-weight: 600; /* Hace que el título del ejercicio destaque */
+    }
+
+        .key-points-list li p[b-xdmzba3re0] {
+            margin-top: 5px;
+            font-weight: 400; /* El contenido de la descripción en peso normal */
+        }
+
+/* Etiqueta que numera las capturas */
+.badge-custom[b-xdmzba3re0] {
+    background-color: #e0f2f1;
+    color: #00695c;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+/* Estilos para las miniaturas de imagen */
+.project-thumb-acceso[b-xdmzba3re0] {
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Reducimos el tamaño de la miniatura ligeramente */
+    max-height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+    .project-thumb-acceso:hover[b-xdmzba3re0] {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+/* Ocultamos el contenedor de enlace si existe */
+.link-card[b-xdmzba3re0] {
+    display: none;
+}
+/* /Pages/Billar.razor.rz.scp.css */
+/* Estilos generales */
+.project-title[b-t3t8var5q6] {
+    color: #4CAF50; /* Verde brillante, asociado a juegos o Unity */
+    font-weight: 700;
+}
+
+/* Estilo para el enlace de descarga */
+.billar-link-card[b-t3t8var5q6] {
+    background-color: #212121; /* Fondo oscuro, como una consola */
+    border: 2px solid #4CAF50; /* Borde verde */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.download-link[b-t3t8var5q6] {
+    font-weight: 700;
+    color: #FFEB3B !important; /* Amarillo vibrante para el texto */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .download-link:hover[b-t3t8var5q6] {
+        color: #FFC107 !important;
+    }
+
+/* Estilos para la lista de puntos clave */
+.key-points-list[b-t3t8var5q6] {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .key-points-list li[b-t3t8var5q6] {
+        margin-bottom: 15px;
+        font-size: 0.95rem; /* Pequeño pero legible para móvil */
+        line-height: 1.5;
+    }
+
+/* Estilos para las miniaturas de imagen */
+.project-thumb[b-t3t8var5q6] {
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .project-thumb:hover[b-t3t8var5q6] {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+/* /Pages/Blazor.razor.rz.scp.css */
+/* Estilos específicos para la página Blazor */
+
+.project-title[b-h7j1kssqwb] {
+    color: #512BD4; /* Púrpura, color asociado a .NET/Blazor */
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.project-description[b-h7j1kssqwb] {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para la lista de puntos clave */
+.key-points-list[b-h7j1kssqwb] {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .key-points-list li[b-h7j1kssqwb] {
+        margin-bottom: 18px;
+        font-size: 1rem;
+        line-height: 1.5;
+        background-color: #f5f5f5;
+        padding: 12px;
+        border-left: 5px solid #512BD4;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .key-points-list li:hover[b-h7j1kssqwb] {
+            background-color: #eee;
+        }
+
+/* Colores de iconos personalizados */
+.text-primary[b-h7j1kssqwb] {
+    color: #512BD4 !important;
+}
+
+.text-success[b-h7j1kssqwb] {
+    color: #008000 !important;
+}
+
+.text-info[b-h7j1kssqwb] {
+    color: #17a2b8 !important;
+}
+
+.text-warning[b-h7j1kssqwb] {
+    color: #ffc107 !important;
+}
+/* /Pages/JavaSwing.razor.rz.scp.css */
+/* Estilos generales */
+.project-title[b-4caro66pxz] {
+    color: #007bff; /* Azul de Bootstrap/Swing clásico */
+    font-weight: 700;
+}
+
+/* Estilos para la lista de puntos clave */
+.key-points-list[b-4caro66pxz] {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .key-points-list li[b-4caro66pxz] {
+        margin-bottom: 15px;
+        font-size: 0.95rem; /* Pequeño pero legible para móvil */
+        line-height: 1.5;
+    }
+
+/* Estilos para las miniaturas de imagen */
+.project-thumb[b-4caro66pxz] {
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .project-thumb:hover[b-4caro66pxz] {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+/* Asegura que el contenedor del enlace (aunque no lo usemos) no interfiera */
+.link-card[b-4caro66pxz] {
+    display: none; /* Ocultamos el contenedor de enlace que heredamos de la plantilla anterior */
+}
+/* /Pages/WebAppAngular.razor.rz.scp.css */
+/* Estilos generales */
+.project-title[b-audnefsqaa] {
+    color: #DC3545; /* Un rojo vibrante, similar al de Angular, para el título */
+    font-weight: 150;
+}
+
+/* Estilo para el enlace destacado */
+.link-card[b-audnefsqaa] {
+    background-color: #f8f9fa; /* Fondo muy claro para la caja */
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+.live-link[b-audnefsqaa] {
+    font-weight: 600;
+    color: #17a2b8 !important; /* Color azul cian para destacar sin ser estridente */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    .live-link:hover[b-audnefsqaa] {
+        color: #0b8093 !important;
+    }
+
+/* Estilos para la lista de puntos clave */
+.key-points-list[b-audnefsqaa] {
+    list-style: none;
+    padding-left: 0;
+}
+
+    .key-points-list li[b-audnefsqaa] {
+        margin-bottom: 15px;
+        font-size: 0.95rem; /* Pequeño pero legible para móvil */
+        line-height: 1.5;
+    }
+
+/* Estilos para las miniaturas de imagen */
+.project-thumb[b-audnefsqaa] {
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+    .project-thumb:hover[b-audnefsqaa] {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+/* Asegura el tamaño para móviles (la grilla de Bootstrap ya ayuda) */
+@media (max-width: 576px) {
+    .project-title[b-audnefsqaa] {
+        font-size: 1.5rem;
+    }
+}

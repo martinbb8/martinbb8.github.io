@@ -1,0 +1,56 @@
+.navbar-toggler {
+    /* Mantenemos el botón de menú visible */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-scrollable {
+    /* El contenedor del menú debe ser alto */
+    overflow-y: auto;
+}
+
+
+/* * Ajustamos los enlaces de navegación (NavLink) 
+ * Eliminamos el padding interno y forzamos la alineación a la izquierda.
+ */
+.nav-link {
+    color: white !important;
+    padding: 0rem 1rem 0.5rem 0.5rem; /* Ajustado: 0.5rem a la izquierda, 1rem a la derecha */
+    margin-left: 0; /* Aseguramos que no haya margen izquierdo */
+    text-align: left;
+    white-space: nowrap; /* Mantenemos el texto en una sola línea (ya lo habías hecho) */
+}
+
+    /* Estilo para el enlace activo (página seleccionada) */
+    .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border-left: 4px solid #f90; /* Destacamos el elemento activo */
+    }
+
+/* Estilos para el texto principal 'PROYECTOS' */
+.navbar-brand {
+    font-size: 1.1rem;
+    color: white !important;
+    text-align: left;
+    margin-left: 0.5rem; /* Pequeño margen para separarlo del borde */
+}
+
+.top-row {
+    height: 7rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Corrección para asegurar que los items estén pegados al borde */
+.nav-item {
+    padding: 0; /* Eliminamos el padding lateral para que se pegue al borde */
+    color: white;
+}
+/* Estilo para el título de la sección de proyectos */
+.proyectos {
+    color: #aaaaaa; /* Un gris claro para contraste sutil */
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-left: 0.5rem; /* Alineado con los enlaces */
+    margin-bottom: 5px;
+}

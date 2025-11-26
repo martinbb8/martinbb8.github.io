@@ -1,0 +1,4 @@
+C:\Users\cicli\Desktop\jobie\2ºDAM\Desarrollo_de_interfaces\ejercicios\CV_2025\obj\Release\net8.0\browser-wasm\PubTmp\Out\sample-data\weather.json
+C:\Users\cicli\Desktop\jobie\2ºDAM\Desarrollo_de_interfaces\ejercicios\CV_2025\obj\Release\net8.0\browser-wasm\PubTmp\Out\_framework\blazor.boot.json
+C:\Users\cicli\Desktop\jobie\2ºDAM\Desarrollo_de_interfaces\ejercicios\CV_2025\obj\Release\net8.0\browser-wasm\PubTmp\Out\emcc-props.json
+C:\Users\cicli\Desktop\jobie\2ºDAM\Desarrollo_de_interfaces\ejercicios\CV_2025\obj\Release\net8.0\browser-wasm\PubTmp\Out\web.config

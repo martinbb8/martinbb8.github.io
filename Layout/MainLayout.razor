@@ -1,0 +1,119 @@
+﻿@inherits LayoutComponentBase
+@code {
+    // Declara el estado y los datos que se pasan al Lightbox
+    private bool isProfileModalOpen = false;
+    private string modalImage = "/images/RMN.jpg"; // URL de la imagen grande (usaremos la misma por ahora)
+    private string modalAlt = "Rubén Martín Novalbos ";
+    private string modalDescription = "Rubén Martín Novalbos ";
+
+    // Lógica para abrir el modal (llamada desde el botón en el Header)
+    private void OpenProfileModal()
+    {
+        isProfileModalOpen = true;
+    }
+
+    // Lógica para cerrar el modal (llamada por el componente Lightbox)
+    private void CloseProfileModal()
+    {
+        isProfileModalOpen = false;
+    }
+}
+
+<div style="display: flex; flex-direction: column; min-height: 100vh;">
+      
+  
+
+    @* ====================================== *@
+    @* CABECERA (Header) - USANDO REJILLA RESPONSIVE *@
+    @* ====================================== *@
+    <header class="header-row bg-primary text-white" >
+
+        <div class="container-fluid">
+
+            @* Fila principal que contiene las 4 columnas *@
+            <div class="row align-items-center">
+
+                @* COLUMNA 1: FOTO (3/12 en escritorio, 12/12 en móvil) *@
+                <div class="col-auto text-md-start">
+                    <button class="btn p-0 border-0 bg-transparent" @onclick="OpenProfileModal">
+                        <img src="/images/RMN.jpg" alt="Rubén Martín Novalbos" class="profile-photo" />
+                    </button>
+                </div>
+
+                @* COLUMNA 2: NOMBRE (4/12 en escritorio, 12/12 en móvil) *@
+                <div class="col-4 col-md-3 text-center text-md-start my-2 my-md-0">
+                    <h1 class="h3 fw-bold mb-0">Rubén Martín</h1>
+                    <h1 class="h3 fw-bold mt-0 pt-0">Novalbos</h1> @* Separación en dos líneas forzada *@
+                </div>
+
+                @* COLUMNA 3: TELÉFONO Y FECHA (3/12 en escritorio, 6/12 en móvil) *@
+                <div class="col-3 col-md-3 text-center text-md-start">
+                  <a href="tel:+34622045103" class="text-white" style="text-decoration: none;">
+                  <span class="bi bi-telephone-fill" aria-hidden="true"></span> 622045103
+</a>
+                    <h2 class="h6 mb-00">09/06/1977</h2>
+                </div>
+
+                
+
+            </div>
+
+        </div>
+    </header>
+
+    @* ====================================== *@
+    @* CUERPO Y NAVMENU (El resto no cambia) *@
+    @* ====================================== *@
+    <div style="display: flex; flex-grow: 1;">
+
+        @* Barra Lateral: ancho fijo *@
+        <div style="width: 25vw;  background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);">
+            <NavMenu />
+        </div>
+
+        @* Contenido Principal: ocupa el espacio restante *@
+        <main style="flex-grow: 1;">
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+    
+    @* ====================================== *@
+    @* FOOTER *@
+    @* ====================================== *@
+    <footer class="py-3 bg-dark text-white" style="width: 100%; margin-top: auto;">
+        <div class="container text-center">
+            <div class="text-center text-md-start">
+                <p class="h6 mb-1 pt-2 pt-md-0 ms-lg-1">
+                 
+                    <a href="mailto:ciclismoacuatico@gmail.com" 
+                       class="text-white-50" style="text-decoration: none;">
+                        <span class="bi bi-envelope" aria-hidden="true"></span>ciclismoacuatico@gmail.com
+                    </a>
+
+                    <a href="https://github.com/martinbb8" target="_blank" class="text-white mx-2">
+                        <span class="bi bi-github" aria-hidden="true"></span> GitHub
+                    </a>
+                    <a href="https://www.facebook.com/ciclismoacuatico" target="_blank">
+                        <span class="bi bi-facebook" aria-hidden="true"></span> Facebook
+                    </a>
+                   
+                    <h2 class="text-white-50 h6 mb-0"> Los Urrutias-Cartagena (Murcia)</h2>
+                </p>
+                
+            </div>
+          
+           
+        </div>
+    </footer>
+
+       @* Componente Lightbox para la foto de perfil *@
+       <Lightbox IsVisible="@isProfileModalOpen"
+              FullImageUrl="@modalImage"
+              ImageAlt="@modalAlt"
+              Description="@modalDescription"
+              OnClose="CloseProfileModal" />
+       
+ 
+</div>

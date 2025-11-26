@@ -1,0 +1,67 @@
+﻿@page "/webapp-angular"
+<Lightbox @ref="myLightbox" />
+
+<PageTitle>Proyecto WebApp Angular - Portfolio</PageTitle>
+
+<div class="container py-4">
+    <h6 class="mb-4 project-title">WebApp-Angular </h6>
+
+    <!-- 1. ENLACE DESTACADO -->
+    <div class="mb-4 p-3 d-flex justify-content-center align-items-center link-card">
+        <span class="bi bi-globe me-2"></span>
+        <a href="https://osopanda.duckdns.org/" target="_blank" class="live-link">
+            Ir a la web
+        </a>
+    </div>
+
+    <!-- 2. DESCRIPCIÓN Y PUNTOS CLAVE (UL) -->
+    <p class="project-description">
+        Desarrollé esta aplicación como herramienta de apoyo didáctico para compañer@s de DAM para afianzar conceptos clave a través de múltiples formatos.
+    </p>
+
+    <h2 class="h5 mt-4 mb-3">Tecnologías y Desafíos Clave:</h2>
+    <ul class="key-points-list">
+        <li>
+            <span class="bi bi-check-circle-fill me-2 text-success"></span>
+            **Propósito Didáctico:** WebApp creada para facilitar el estudio y afianzamiento de conceptos con `Tests` interactivos, `Podcasts`, material `PDF` y `Videos`.
+        </li>
+        <li>
+            <span class="bi bi-gear-fill me-2 text-primary"></span>
+            **Framework Angular:** Elegido por su robustez, su estructura modular basada en componentes y el uso de TypeScript, lo que asegura un código escalable y de alta calidad.
+        </li>
+        <li>
+            <span class="bi bi-server me-2 text-warning"></span>
+            **Self-Hosting y Redes:** Alojamiento propio en un miniPC doméstico, superando el desafío de exponer una IP dinámica pública fuera del NAS.
+        </li>
+        <li>
+            <span class="bi bi-lock-fill me-2 text-danger"></span>
+            **Seguridad (HTTPS):** Configuración de redirección de puertos (443) e implementación de certificados SSL/TLS mediante `Certbot` para garantizar la seguridad y funcionalidad con `DuckDNS`.
+        </li>
+    </ul>
+
+    <!-- 3. GALERÍA DE IMÁGENES -->
+    <h2 class="h5 mt-5 mb-3">Imágenes del Proyecto:</h2>
+    <div class="row g-2">
+        @for (int i = 1; i <= 4; i++)
+        {
+            // Usamos el nombre de archivo específico: WebAppAngular_X.jpg
+            var imageUrl = $"/images/WebAppAngular_{i}.png";
+            var description = $"Captura de pantalla {i} del proyecto Angular";
+
+            <div class="col-6 col-md-3">
+                <img src="@imageUrl"
+                     alt="@description"
+                     class="img-fluid project-thumb"
+                     @onclick="() => myLightbox.Show(imageUrl, description)"
+                     style="width: 100%; height: auto; max-height: 200px; object-fit: cover; cursor: pointer;"
+                     onerror="this.onerror=null;this.src='https://placehold.co/200x112/555/white?text=Img+@i+Placeholder'" />
+            </div>
+        }
+    </div>
+
+</div>
+
+@code {
+    private Lightbox myLightbox = default!;
+    // Es necesario inyectar LightboxService arriba, así que este bloque C# debe estar presente aunque esté vacío
+}
